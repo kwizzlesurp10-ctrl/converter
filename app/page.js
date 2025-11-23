@@ -1,11 +1,11 @@
 import React from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Sparkles, Zap, Smile, Settings, Type, Signal } from "lucide-react";
-import LeetConverter from "../components/LeetConverter";
-import EmojiConverter from "../components/EmojiConverter";
-import CustomMapper from "../components/CustomMapper";
-import AsciiConverter from "../components/AsciiConverter";
-import MorseConverter from "../components/MorseConverter";
+import LeetConverter from "@/components/LeetConverter";
+import EmojiConverter from "@/components/EmojiConverter";
+import CustomMapper from "@/components/CustomMapper";
+import AsciiConverter from "@/components/AsciiConverter";
+import MorseConverter from "@/components/MorseConverter";
 
 export default function Home() {
   return (
