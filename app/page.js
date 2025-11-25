@@ -1,11 +1,13 @@
 import React from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Sparkles, Zap, Smile, Settings, Type, Signal } from "lucide-react";
+import { Sparkles, Zap, Smile, Settings, Type, Signal, Search, FunctionSquare } from "lucide-react";
 import LeetConverter from "@/components/LeetConverter";
 import EmojiConverter from "@/components/EmojiConverter";
 import CustomMapper from "@/components/CustomMapper";
 import AsciiConverter from "@/components/AsciiConverter";
 import MorseConverter from "@/components/MorseConverter";
+import OpenMojiBrowser from "@/components/OpenMojiBrowser";
+import FibonacciConverter from "@/components/FibonacciConverter";
 
 export default function Home() {
   return (
@@ -33,7 +35,7 @@ export default function Home() {
             <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 overflow-hidden">
               <Tabs defaultValue="leet" className="w-full">
                 <div className="border-b border-slate-200 bg-white/50 px-6 pt-6">
-                  <TabsList className="grid w-full grid-cols-5 bg-slate-100/80">
+                  <TabsList className="grid w-full grid-cols-7 bg-slate-100/80">
                     <TabsTrigger value="leet" className="flex items-center gap-2">
                       <Zap className="w-4 h-4" />
                       <span className="hidden sm:inline">L33T Speak</span>
@@ -43,6 +45,16 @@ export default function Home() {
                       <Smile className="w-4 h-4" />
                       <span className="hidden sm:inline">Emoji Speak</span>
                       <span className="sm:hidden">Emoji</span>
+                    </TabsTrigger>
+                    <TabsTrigger value="openmoji" className="flex items-center gap-2">
+                      <Search className="w-4 h-4" />
+                      <span className="hidden sm:inline">OpenMoji</span>
+                      <span className="sm:hidden">Moji</span>
+                    </TabsTrigger>
+                    <TabsTrigger value="fibonacci" className="flex items-center gap-2">
+                      <FunctionSquare className="w-4 h-4" />
+                      <span className="hidden sm:inline">Fibonacci</span>
+                      <span className="sm:hidden">Fib</span>
                     </TabsTrigger>
                     <TabsTrigger value="ascii" className="flex items-center gap-2">
                       <Type className="w-4 h-4" />
@@ -69,6 +81,14 @@ export default function Home() {
 
                   <TabsContent value="emoji" className="mt-0">
                     <EmojiConverter />
+                  </TabsContent>
+                  
+                  <TabsContent value="openmoji" className="mt-0">
+                    <OpenMojiBrowser />
+                  </TabsContent>
+                  
+                  <TabsContent value="fibonacci" className="mt-0">
+                    <FibonacciConverter />
                   </TabsContent>
 
                   <TabsContent value="ascii" className="mt-0">
