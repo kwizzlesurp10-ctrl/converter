@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -34,27 +36,9 @@ const FibonacciConverter = () => {
     setExecutionTime(endTime - startTime);
   };
 
-  const recursiveCode = `// Naive Recursive (Exponential Time, O(2^n))
-long long fib_recursive(int n) {
-    if (n <= 1) {
-        return n;
-    }
-    return fib_recursive(n - 1) + fib_recursive(n - 2);
-}`;
+  const recursiveCode = `// Naive Recursive (Exponential Time, O(2^n))\nlong long fib_recursive(int n) {\n    if (n <= 1) {\n        return n;\n    }\n    return fib_recursive(n - 1) + fib_recursive(n - 2);\n}`;
 
-  const iterativeCode = `// Iterative (Linear Time, O(n), O(1) Space)
-long long fib_iterative(int n) {
-    if (n <= 1) {
-        return n;
-    }
-    long long a = 0, b = 1;
-    for (int i = 2; i <= n; ++i) {
-        long long temp = a + b;
-        a = b;
-        b = temp;
-    }
-    return b;
-}`;
+  const iterativeCode = `// Iterative (Linear Time, O(n), O(1) Space)\nlong long fib_iterative(int n) {\n    if (n <= 1) {\n        return n;\n    }\n    long long a = 0, b = 1;\n    for (int i = 2; i <= n; ++i) {\n        long long temp = a + b;\n        a = b;\n        b = temp;\n    }\n    return b;\n}`;
 
   return (
     <div className="space-y-6">
