@@ -1,0 +1,26 @@
+[debug] [2025-12-02T13:32:32.876Z] ----------------------------------------------------------------------
+[debug] [2025-12-02T13:32:32.878Z] Command:       /nix/store/ws50yvm6vzlzf7jzz6n7xh4szddrack1-nodejs-20.19.1/bin/node /nix/store/12bms99s479knhxggq0wrjfch7rhy26s-firebase-tools-14.24.1/lib/node_modules/firebase-tools/lib/bin/firebase.js init
+[debug] [2025-12-02T13:32:32.879Z] CLI Version:   14.24.1
+[debug] [2025-12-02T13:32:32.879Z] Platform:      linux
+[debug] [2025-12-02T13:32:32.879Z] Node Version:  v20.19.1
+[debug] [2025-12-02T13:32:32.879Z] Time:          Tue Dec 02 2025 13:32:32 GMT+0000 (Coordinated Universal Time)
+[debug] [2025-12-02T13:32:32.879Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-12-02T13:32:33.109Z] No OAuth tokens found
+[debug] [2025-12-02T13:32:33.110Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/user/converter
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
