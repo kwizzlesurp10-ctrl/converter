@@ -11,25 +11,32 @@ const Tabs = ({ children }) => {
 
   return (
     <div>
-      <ul className="flex border-b border-gray-600">
+      <ul className="flex items-center border-b border-gray-700">
         {children.map((child) => (
           <li
             key={child.props.label}
-            className={`${
+            className={`px-4 py-3 -mb-px font-semibold text-lg border-b-2 transition-all duration-200 cursor-pointer ${
               activeTab === child.props.label
-                ? 'border-blue-500 text-blue-500'
-                : 'border-transparent text-gray-400 hover:text-white hover:border-gray-300'
-            } border-b-2  transition duration-300 ease-in-out px-4 py-2 cursor-pointer`}
+                ? 'border-purple-500 text-white'
+                : 'border-transparent text-gray-500 hover:text-white'
+            }`}
             onClick={(e) => handleClick(e, child.props.label)}
           >
             {child.props.label}
           </li>
         ))}
       </ul>
-      <div className="py-4">
+      <div className="pt-6">
         {children.map((child) => {
           if (child.props.label === activeTab) {
-            return <div key={child.props.label}>{child.props.children}</div>;
+            return (
+              <div
+                key={child.props.label}
+                className="animate-fade-in"
+              >
+                {child.props.children}
+              </div>
+            );
           }
           return null;
         })}
